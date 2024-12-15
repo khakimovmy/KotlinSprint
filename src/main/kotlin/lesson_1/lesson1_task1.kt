@@ -2,7 +2,10 @@ package lesson_1
 
 fun main() {
 
-    println("Это тестовое решение к уроку №1")
-    println("Отправляю на код ревю!")
+    val numberOfOrders: Int = 75
+    val thankYouText: String = "Спасибо за вашу покупку!"
+
+    println("Количество заказов составило $numberOfOrders штук!")
+    println(thankYouText)
 
 }
