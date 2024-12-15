@@ -2,9 +2,9 @@ package lesson_1
 
 fun main() {
 
-    val year = 1961
-    var hour: String = "09"
-    var minute: String = "07"
+    val year: Int = 1961
+    var hour: Int = 9
+    var minute: Int = 7
 
     println(year)
     println(hour)
@@ -12,9 +12,10 @@ fun main() {
 
 //    println("Время взлета - $year год в $hour:$minute")
 
-    hour = "10"
-    minute = "55"
+    hour = 10
+    minute = 55
 
-    println("Время посадки - в $hour:$minute")
+//    println("Время посадки - в $hour:$minute")
 
+    println("$hour:$minute")
 }
