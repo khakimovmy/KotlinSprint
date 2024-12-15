@@ -6,8 +6,8 @@ fun main() {
     val thankYouText: String = "Спасибо за вашу покупку!!!"
     var numberOfWorkers: Int = 2000
 
-    println("Количество заказов составило $numberOfOrders штук!")
-    println(thankYouText)
+//    println("Количество заказов составило $numberOfOrders штук!")
+//    println(thankYouText)
 
     println("Количество сотрудников состаляет: $numberOfWorkers человек") //2000
 
