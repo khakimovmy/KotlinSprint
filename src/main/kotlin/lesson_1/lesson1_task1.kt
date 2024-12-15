@@ -8,4 +8,6 @@ fun main() {
     println("Количество заказов составило $numberOfOrders штук")
     println(thankYouText)
 
+    // comment
+
 }
