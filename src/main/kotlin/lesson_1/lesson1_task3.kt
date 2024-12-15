@@ -1,7 +1,5 @@
 package lesson_1
 
-import kotlin.math.min
-
 fun main() {
 
     val year = 1961
