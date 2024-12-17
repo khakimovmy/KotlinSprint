@@ -11,6 +11,12 @@ fun main() {
     println("Бонусные кристаллы - $buffedCrystals")
     println("Бонусное железо - $buffedIron")
 
+    val totalCrystals = crystals + buffedCrystals
+    val totalIron = iron + buffedIron
+
+    println("Всего кристаллов: $totalCrystals")
+    println("Всего железа: $totalIron")
+
 }
 
 const val BUFF = 20.0
