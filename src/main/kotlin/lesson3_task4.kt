@@ -1,4 +1,5 @@
 fun main() {
+
     var fromWhere = "E2"
     var toWhere = "E4"
     var moveNumber = 1
@@ -12,4 +13,5 @@ fun main() {
 
     moveString = "$fromWhere-$toWhere;$moveNumber"
     println("Игрок с черными сделал ход: $moveString")
+
 }
