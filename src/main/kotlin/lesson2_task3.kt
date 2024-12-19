@@ -1,13 +1,13 @@
 fun main() {
+    val departureHour = 9  // Часы отправления
+    val departureMinute = 39  // Минуты отправления
+    val onTheWayTime = 457  // Время в пути
 
-    val totalMinutes = DEPARTURE_HOUR * 60 + DEPARTURE_MINUTE + ON_THE_WAY_TIME
-    val comingHour = totalMinutes / 60
-    val comingMinute = totalMinutes % 60
+    val totalMinutes = departureHour * MINUTES_IN_HOUR + departureMinute + onTheWayTime
+    val comingHour = totalMinutes / MINUTES_IN_HOUR
+    val comingMinute = totalMinutes % MINUTES_IN_HOUR
 
-    println("Поезд прибудет в: $comingHour:$comingMinute")
-
+    println("Поезд прибудет в $comingHour:$comingMinute")
 }
 
-const val DEPARTURE_HOUR: Int = 9
-const val DEPARTURE_MINUTE: Int = 39
-const val ON_THE_WAY_TIME: Int = 457
+const val MINUTES_IN_HOUR = 60  //  Минут в часе
