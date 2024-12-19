@@ -1,11 +1,11 @@
 fun main() {
 
     val userName = "Joseph"
-    var welcomeMessage = "Добрый день $userName, добро пожаловать в Сбербанк!"
+    var timeMessage = "Добрый день, "
 
-    println(welcomeMessage)
+    println(" ${timeMessage + userName} ")
 
-    welcomeMessage = "Добрый вечер $userName, добро пожаловать в Сбербанк!"
-    println(welcomeMessage)
+    timeMessage = "Добрый вечер, "
+    println(" ${timeMessage + userName} ")
 
 }
