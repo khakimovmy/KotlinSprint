@@ -1,3 +1,5 @@
+package lesson_3
+
 fun main() {
 
     var fromWhere = "E2"

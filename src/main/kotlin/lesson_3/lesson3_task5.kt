@@ -1,3 +1,5 @@
+package lesson_3
+
 fun main() {
 
     val moveString = "D2-D4;0"

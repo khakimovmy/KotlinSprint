@@ -1,3 +1,5 @@
+package lesson_2
+
 import kotlin.math.pow
 
 fun main() {

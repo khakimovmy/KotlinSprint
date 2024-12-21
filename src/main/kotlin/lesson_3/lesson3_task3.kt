@@ -1,3 +1,5 @@
+package lesson_3
+
 fun main() {
 
     val yourNumber: Int = 6

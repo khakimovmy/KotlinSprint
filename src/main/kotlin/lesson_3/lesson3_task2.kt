@@ -1,3 +1,5 @@
+package lesson_3
+
 fun main() {
 
     val name = "Татьяна"

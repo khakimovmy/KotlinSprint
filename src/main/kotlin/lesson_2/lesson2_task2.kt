@@ -1,3 +1,5 @@
+package lesson_2
+
 fun main() {
 
     val workers: Int = 50 // Рабочие

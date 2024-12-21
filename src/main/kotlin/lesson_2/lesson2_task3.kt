@@ -1,3 +1,5 @@
+package lesson_2
+
 fun main() {
     val departureHour = 9  // Часы отправления
     val departureMinute = 39  // Минуты отправления

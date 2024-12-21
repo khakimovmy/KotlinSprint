@@ -1,3 +1,5 @@
+package lesson_2
+
 fun main() {
 
     val crystals = 7
