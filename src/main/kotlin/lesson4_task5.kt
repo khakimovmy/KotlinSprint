@@ -4,16 +4,16 @@ fun main() {
     val shipCrew = 55
     val provision = 53
     val goodWeather = false
-    val badWeather = true
+//    val badWeather = true
 
-    val shipCan = ((shipDamages == true) && (shipCrew >= MIN_CREW) && (shipCrew <= MAX_CREW)
-            && (provision > PROVISION) && ((goodWeather == true)) || (badWeather == true)) ||
-            (shipCrew == RECOMMENDED_CREW) && (goodWeather == true) && (provision >= PROVISION)
+    val shipCan = (!shipDamages && shipCrew in MIN_CREW..MAX_CREW && provision > MIN_PROVISION) ||
+            (shipDamages && shipCrew == RECOMMENDED_CREW && goodWeather && provision >= MIN_PROVISION)
+
     println("Ship can go: $shipCan")
 
 }
 
 const val MIN_CREW: Int = 55
 const val MAX_CREW: Int = 70
-const val PROVISION: Int = 50
+const val MIN_PROVISION: Int = 50
 const val RECOMMENDED_CREW: Int = 70
