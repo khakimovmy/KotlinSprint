@@ -3,12 +3,12 @@ fun main() {
     val name = "Татьяна"
     val middleName = "Сергеевна"
     var surname = "Андреева"
+    var age = 20
 
-    val age20 = "Фамилия: $surname Имя: $name Очество: $middleName"
-    println("В возрасте 20 лет - $age20")
+    println("В возрасте $age лет - \"Фамилия: $surname Имя: $name Очество: $middleName\"")
 
     surname = "Сидорова"
-    val age22 = "Фамилия: $surname Имя: $name Очество: $middleName"
-    println("В возрасте 22 года - $age22")
+    age = 22
+    println("В возрасте $age года - \"Фамилия: $surname Имя: $name Очество: $middleName\"")
 
 }
