@@ -6,7 +6,8 @@ fun main() {
     val todayFree: Boolean = TOTAL_TABLES > todayBooked
     val tomorrowFree: Boolean = TOTAL_TABLES > tomorrowBooked
 
-    println("Доступность столиков на сегодня: $todayFree \nДоступность столиков на завтра: $tomorrowFree")
+    println("Доступность столиков на сегодня: $todayFree")
+    println("Доступность столиков на завтра: $tomorrowFree")
 
 }
 
