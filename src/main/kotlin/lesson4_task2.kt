@@ -1,9 +1,17 @@
 fun main() {
 
-    val userWeight = 50
-    val userVolume = 100
+    val userWeight1 = 20
+    val userVolume1 = 80
+    val userWeight2 = 50
+    val userVolume2 = 100
 
-    println("Груз с весом $userWeight кг и объемом $userVolume л соответствует категории 'Average': " + ((userWeight > 35) && (userWeight <= 100) && userVolume < 100))
+
+    println("Груз с весом $userWeight1 кг и объемом $userVolume1 л соответствует категории 'Average': " +
+            ((userWeight1 > MINIMUM_WEIGHT) && (userWeight1 <= MAXIMUM_WEIGHT) && (userVolume1 < MAXIMUM_VOLUME)))
+
+
+    println("Груз с весом $userWeight2 кг и объемом $userVolume2 л соответствует категории 'Average': " +
+            ((userWeight2 > MINIMUM_WEIGHT) && (userWeight2 <= MAXIMUM_WEIGHT) && (userVolume2 < MAXIMUM_VOLUME)))
 
 }
 
