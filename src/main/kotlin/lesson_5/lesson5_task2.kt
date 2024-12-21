@@ -5,7 +5,9 @@ import java.time.Year
 fun main() {
 
     val year = Year.now().value
+
     println("Введите год вашего рождения: ")
+
     val birthYear = readln().toInt()
     val userAge = year - birthYear
 
@@ -16,6 +18,7 @@ fun main() {
     } else {
         "Вернуться на главный экран"
     }
+
     println(resultText)
 
 }
