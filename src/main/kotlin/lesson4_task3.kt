@@ -5,7 +5,9 @@ fun main() {
     val airHumidity: Int = 20
     val seasonNow: String = "Summer"
 
-    println("Благоприятные ли условия сейчас для роста бобовых? " + ((weather == SUNNY) && (tentNow == OPEN_TENT) && (airHumidity == AIR_HUMIDITY) && (seasonNow != SEASON)))
+    println("Благоприятные ли условия сейчас для роста бобовых? " +
+            ((weather == SUNNY) && (tentNow == OPEN_TENT) &&
+                    (airHumidity == AIR_HUMIDITY) && (seasonNow != SEASON)))
 
 }
 
