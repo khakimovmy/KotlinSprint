@@ -2,14 +2,13 @@ fun main() {
 
     val day: Int = 3
 
-    val armAndAbs: Boolean = day % 2 != 0
-    val legAndBack: Boolean = day % 2 == 0
+    val workOut: Boolean = day % 2 == 0
 
     print("""
-       Упражнения для рук:    $armAndAbs
-       Упражнения для ног:    $legAndBack
-       Упражнения для спины:  $legAndBack
-       Упражнения для пресса: $armAndAbs
+       Упражнения для рук:    ${!workOut}
+       Упражнения для ног:    $workOut
+       Упражнения для спины:  $workOut
+       Упражнения для пресса: ${!workOut}
     """.trimIndent())
 
 }
