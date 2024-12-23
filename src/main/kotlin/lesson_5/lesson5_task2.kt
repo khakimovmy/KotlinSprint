@@ -13,7 +13,7 @@ fun main() {
 
     val resultText = if (userAge >= AGE_OF_MAJORITY) {
         "Показать экран со скрытым контентом"
-    } else if (userAge == 16 || userAge == 17) {
+    } else if (userAge == LIMITED_AGE_1 || userAge == LIMITED_AGE_2) {
         "Показать экран с лимитированным контентом"
     } else {
         "Вернуться на главный экран"
@@ -24,3 +24,5 @@ fun main() {
 }
 
 const val AGE_OF_MAJORITY = 18
+const val LIMITED_AGE_1 = 16
+const val LIMITED_AGE_2 = 17
