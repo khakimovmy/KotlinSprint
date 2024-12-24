@@ -1,3 +1,5 @@
+package lesson_4
+
 fun main() {
 
     val userWeight1 = 20
