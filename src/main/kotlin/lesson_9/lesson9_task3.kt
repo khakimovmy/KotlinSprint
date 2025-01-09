@@ -13,6 +13,6 @@ fun main() {
 
     println(
         "На $portion порций вам понадобится: Яиц – $totalEggs шт., молока – $totalMilk мл," +
-                "сливочного масла – $totalButter гр., соли – $totalButter гр."
+                "сливочного масла – $totalButter гр., соли – $totalSalt гр."
     )
 }
