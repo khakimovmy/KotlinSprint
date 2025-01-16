@@ -1,7 +1,5 @@
 package lesson_6
 
-import kotlin.math.log
-
 fun main() {
     println("Создать аккаунт")
 
@@ -11,24 +9,27 @@ fun main() {
     println("Создайте пароль:")
     val password = readln()
 
-    while (true) {
+    var userLogin: String
+    var userPassword: String
+
+    do {
         println("Введите логин:")
-        val userLogin = readln()
+        userLogin = readln()
 
-        if (userLogin == login) {
-            while (true) {
-                println("Введите пароль:")
-                val userPassword = readln()
-
-                if (userPassword == password) {
-                    println("Авторизация прошла успешно")
-                    return
-                } else {
-                    println("Пароль неверный. Попробуйте снова.")
-                }
-            }
-        } else {
-            println("Логин не совпадает. Попробуйте снова.")
+        if (userLogin != login) {
+            println("Логин не совпадает. Попробуйте снова!")
+            continue
         }
-    }
+
+        do {
+            println("Введите пароль:")
+            userPassword = readln()
+
+            if (userPassword != password) {
+                println("Пароль неверный. Попробуйте снова!")
+            }
+        } while (userPassword != password)
+
+    } while (userLogin != login)
+    println("Авторизация прошла успешно")
 }
