@@ -9,20 +9,26 @@ fun main() {
 
     println("Введите число от 1 до 9:")
 
-    while (true) {
+    while (attempts > 0) {
         val userNumber = readln().toInt()
         attempts--
 
-        if (userNumber == result) {
-            println("Это была великолепная игра!")
-            return
-        } else if (attempts == 0) {
-            println("Неверно. Попыток не осталось.")
-            break
-        } else {
-            println("Неверно. Введите число от 1 до 9")
+        when {
+            userNumber == result -> {
+                println("Это была великолепная игра!")
+                return // Завершаем программу, если угадали
+            }
+
+            attempts == 0 -> {
+                println("Неверно. Попыток не осталось.")
+                break // Прерываем цикл, если попытки закончились
+            }
+
+            else -> {
+                println("Неверно. Введите число от 1 до 9")
+                println("Осталось $attempts попыток")
+            }
         }
-        println("Осталось $attempts попыток")
     }
     println("Было угадано число $result")
 }
