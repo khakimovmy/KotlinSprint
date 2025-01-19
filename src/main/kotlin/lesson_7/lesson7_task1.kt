@@ -1,8 +1,3 @@
-package lesson_7
-
-import java.lang.StringBuilder
-import kotlin.random.Random
-
 fun main() {
     val generatedPassword = generatePassword()
     println("Сгенерированный пароль: $generatedPassword")
@@ -11,12 +6,14 @@ fun main() {
 fun generatePassword(): String {
     val password = StringBuilder()
 
-    for (i in 1..6) {
+    for (i in 1..PASSWORD_SIZE) {
         if (i % 2 == 0) {
-            password.append(Random.nextInt(0,10))
+            password.append((0..9).random()) // Используем диапазон и random()
         } else {
-            password.append(('a'..'z').random())
+            password.append(('a'..'z').random()) // Аналогично для букв
         }
     }
     return password.toString()
 }
+
+const val PASSWORD_SIZE: Int = 6
