@@ -1,9 +1,7 @@
 package lesson_7
 
-import kotlin.random.Random
-
 fun main() {
-    var code: Int = (1000..9999).random()
+    var code = (1000..9999).random()
     println("Ваш код авторизации: $code")
 
     do {
@@ -14,9 +12,9 @@ fun main() {
             println("Добро пожаловать!")
             break
         } else {
-            println("Неверно.")
-            code = Random.nextInt(1000, 10000)
-            println("Новый код: $code")
+            println("Неверно. Генерируем новый код...")
+            code = (1000..9999).random()
+            println("Ваш новый код авторизации: $code")
         }
     } while (userCode != code)
 }
