@@ -3,10 +3,10 @@ package lesson_7
 import kotlin.random.Random
 
 fun main() {
-    var code: Int = Random.nextInt(1000, 10000)
+    var code: Int = (1000..9999).random()
     println("Ваш код авторизации: $code")
 
-    while (true) {
+    do {
         println("Введите четырехзначный код:")
         val userCode = readln().toInt()
 
@@ -18,5 +18,5 @@ fun main() {
             code = Random.nextInt(1000, 10000)
             println("Новый код: $code")
         }
-    }
+    } while (userCode != code)
 }
