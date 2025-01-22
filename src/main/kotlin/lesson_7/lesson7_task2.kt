@@ -1,10 +1,11 @@
 package lesson_7
 
 fun main() {
-    var code = (1000..9999).random()
-    println("Ваш код авторизации: $code")
 
     do {
+        var code = (1000..9999).random()
+        println("Ваш код авторизации: $code")
+
         println("Введите четырехзначный код:")
         val userCode = readln().toInt()
 
@@ -13,8 +14,6 @@ fun main() {
             break
         } else {
             println("Неверно. Генерируем новый код...")
-            code = (1000..9999).random()
-            println("Ваш новый код авторизации: $code")
         }
     } while (userCode != code)
 }
