@@ -14,8 +14,7 @@ fun main() {
     }
     val sortedIngredient = ingredients.sorted()
 
-    val formattedIngredients = sortedIngredient.joinToString(", ") {
-        it.replaceFirstChar { char -> char.uppercaseChar() }
-    }
+    val formattedIngredients =
+        sortedIngredient.joinToString(", ", postfix = ".").replaceFirstChar { it.uppercaseChar() }
     println("Список ингредиентов: $formattedIngredients")
 }
