@@ -1,26 +1,27 @@
 package lesson_10
 
 fun main() {
-    callingUser()
-    callingRobot()
+    val userResult = rollDice()
+    val robotResult = rollDice()
 
-    if (userDice() > robotDice()) {
-        println("Победило человечество")
-    } else if (userDice() == robotDice()) {
-        println("Победила дружба")
-    } else {
-        println("Победила машина")
+    callingUser(userResult)
+    callingRobot(robotResult)
+
+    when {
+        userResult > robotResult -> println("Победило человечество")
+        userResult == robotResult -> println("Победила дружба")
+        else -> println("Победила машина")
     }
 }
 
-fun callingUser() {
+fun callingUser(result: Int) {
     println("Твоя очередь! Бросай кости")
-    println("Число человека - ${userDice()}")
-}
-fun callingRobot() {
-    println("Очередь робота! Бросай кости")
-    println("Число робота - ${robotDice()}")
+    println("Число человека: $result")
 }
 
-fun userDice(): Int = (1..6).random()
-fun robotDice(): Int = (1..6).random()
+fun callingRobot(result: Int) {
+    println("Очередь робота")
+    println("Число робота: $result")
+}
+
+fun rollDice(): Int = (1..6).random()
