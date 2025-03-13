@@ -34,7 +34,7 @@ class User2(
                 println("Пароль успешно изменен!")
                 break
             } else {
-                println("Неверно!")
+                println("Неверный пароль!")
             }
         }
     }
