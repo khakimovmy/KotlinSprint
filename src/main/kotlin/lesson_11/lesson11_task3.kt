@@ -10,26 +10,19 @@ class Room(
     val name: String,
     val users: MutableList<User>
 ) {
-    fun addUser() {
-        println("Введите имя нового участника:")
-        val newUserName = readln()
-        val newUser = User(newUserName)
+    fun addUser(userName: String) {
+        val newUser = User(userName)
         users.add(newUser)
-        println("${newUser.name} добавлен в комнату!")
+        println("${newUser.name} добавлен в комнату $name")
     }
 
-    fun updateStatus() {
-        println("Введите имя участника, чье имя нужно изменить:")
-        val userName = readln()
+    fun updateStatus(userName: String, newStatus: String) {
         val user = users.find { it.name == userName }
-
         if (user != null) {
-            println("Введите новый статус (разговаривает / микрофон выключен / заглушен):")
-            val newStatus = readln()
             user.status = newStatus
             println("Статус ${user.name} изменён на: $newStatus")
         } else {
-            println("Пользователь не найден!")
+            println("Пользователь $userName не найден!")
         }
     }
 
@@ -50,8 +43,9 @@ fun main() {
             User("Алекс", "микрофон выключен")
         )
     )
+
     room1.displayRoomInfo()
-    room1.addUser()
-    room1.updateStatus()
+    room1.addUser("Лола")
+    room1.updateStatus("Алекс", "Заглушен")
     room1.displayRoomInfo()
 }
