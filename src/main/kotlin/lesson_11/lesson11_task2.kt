@@ -5,9 +5,9 @@ class User2(
     val login: String,
     var password: String,
     val email: String,
-    var bio: String,
+    var bio: String = "Нет информации",
 ) {
-    fun userInfo() {
+    fun getUserInfo() {
         println("Информация о пользователе:")
         println("ID: $id")
         println("Логин: $login")
@@ -16,7 +16,7 @@ class User2(
         println("Био: $bio")
     }
 
-    fun userBio() {
+    fun getUserBio() {
         println("Enter bio:")
         bio = readln()
     }
@@ -41,9 +41,9 @@ class User2(
 }
 
 fun main() {
-    val user = User2(248709, "abba", "1234", "email@gmail.com", "Marketing specialist")
-    user.userInfo()
-    user.userBio()
+    val user = User2(248709, "abba", "1234", "email@gmail.com")
+    user.getUserInfo()
+    user.getUserBio()
     user.changePassword()
-    user.userInfo()
+    user.getUserInfo()
 }
