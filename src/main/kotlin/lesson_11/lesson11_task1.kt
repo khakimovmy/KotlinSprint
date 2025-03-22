@@ -1,8 +1,9 @@
+/*
 package lesson_11
 
 import kotlin.math.log
 
-class User(
+//class User(
     val id: Int,
     val login: String,
     val password: String,
@@ -26,7 +27,8 @@ fun main() {
         email = "veid@gmail.com"
     )
 
-    println("ID: ${user1.id}")
+*/
+/*    println("ID: ${user1.id}")
     println("Login: ${user1.login}")
     println("Password: ${user1.password}")
     println("Email: ${user1.email}")
@@ -36,5 +38,6 @@ fun main() {
     println("ID: ${user2.id}")
     println("Login: ${user2.login}")
     println("Password: ${user2.password}")
-    println("Email: ${user2.email}")
-}
+    println("Email: ${user2.email}")*//*
+
+}*/
