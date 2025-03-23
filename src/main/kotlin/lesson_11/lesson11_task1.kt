@@ -1,25 +1,21 @@
 package lesson_11
 
-import kotlin.math.log
-
-class User(
+class User1(
     val id: Int,
     val login: String,
     val password: String,
     val email: String,
 )
-{
-}
 
 fun main() {
-    val user1: User = User(
+    val user1: User1 = User1(
         id = 100,
         login = "Obi-Wan",
         password = "Star222",
         email = "obiwan@gmail.com"
     )
 
-    val user2: User = User(
+    val user2: User1 = User1(
         id = 200,
         login = "Veider",
         password = "Darth123",
