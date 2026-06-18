@@ -6,10 +6,10 @@ fun main() {
     val day = "Добрый день"
     val night = "Добрый вечер"
 
-    val dayGreeting = "$day, $userName!"
-    val nightGreeting = "$night, $userName!"
+    var greeting = "$day, $userName!"
+    println(greeting)
 
-    println(dayGreeting)
-    println(nightGreeting)
+    greeting = "$night, $userName!"
+    println(greeting)
 
 }
