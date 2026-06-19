@@ -11,14 +11,14 @@ fun main() {
         (isCorpusGood == IS_NOT_DAMAGED
                 && currentCrew >= MIN_CREW
                 && currentCrew <= MAX_CREW
-                && amountOfBaggage > MIN_BAGGAGE
-                && (isGoodWeather == WEATHER || isGoodWeather != WEATHER))
+                && amountOfBaggage > MIN_BAGGAGE)
                 || (isCorpusGood != IS_NOT_DAMAGED
                 && currentCrew == MAX_CREW
                 && isGoodWeather == WEATHER
                 && amountOfBaggage >= MIN_BAGGAGE)
 
     println(canTravel)
+
 }
 
 const val IS_NOT_DAMAGED = true
