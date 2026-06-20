@@ -10,19 +10,14 @@ fun main() {
     while (true) {
         println("Введите логин:")
         val login = readln()
-        if (login == userLogin) {
-            while (true) {
-                println("Введите пароль:")
-                val password = readln()
-                if (password == userPassword) {
-                    println("Авторизация прошла успешно")
-                    return
-                } else {
-                    println("Пароль неверный")
-                }
-            }
+        println("Введите пароль:")
+        val password = readln()
+
+        if ((login == userLogin) && (password == userPassword)) {
+            println("Авторизация прошла успешно")
+            break
         } else {
-            println("Логин неверный")
+            println("Неверный логин или пароль")
         }
     }
 
