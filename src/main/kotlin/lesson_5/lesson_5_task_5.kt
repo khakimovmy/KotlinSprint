@@ -2,16 +2,9 @@ package org.example.lesson_5
 
 fun main() {
 
-    val number1 = readln().toInt()
-    val number2 = readln().toInt()
-    val number3 = readln().toInt()
+    val numbers = List(3) { readln().toInt() }
 
-    val winNumber1 = (0..42).random()
-    val winNumber2 = (0..42).random()
-    val winNumber3 = (0..42).random()
-
-    val numbers = listOf(number1, number2, number3)
-    val winNumbers = listOf(winNumber1, winNumber2, winNumber3)
+    val winNumbers = List(3) { (0..42).random() }
 
     val matches = winNumbers.intersect(numbers)
     val count = matches.size
