@@ -11,7 +11,7 @@ fun main() {
     val winNum1 = 10
     val winNum2 = 22
 
-    val message = if (userNum1 and userNum2 == winNum1 and winNum2)
+    val message = if ((userNum1 == winNum1 && userNum2 == winNum2) || (userNum1 == winNum2 && userNum2 == winNum1))
         "Поздравляем! Вы выиграли главный приз!"
     else if (userNum1 == winNum1 || userNum1 == winNum2 || userNum2 == winNum1 || userNum2 == winNum2)
         "Вы выиграли утешительный приз!"
