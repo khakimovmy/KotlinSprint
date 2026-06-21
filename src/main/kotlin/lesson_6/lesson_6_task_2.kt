@@ -7,7 +7,7 @@ fun main() {
     val total = seconds
 
     while (seconds > 0) {
-        println("${seconds--}")     // или ${--seconds} (смотря какой считать нулевой секундой)
+        seconds--
         Thread.sleep(1000)
     }
 
