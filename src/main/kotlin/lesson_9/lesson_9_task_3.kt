@@ -2,20 +2,20 @@ package org.example.lesson_9
 
 fun main() {
 
-    val amount = mutableListOf(2, 50, 15)
+    val amount = listOf(2, 50, 15)
 
     println("Введите количество порций:")
     val portions = readln().toInt()
 
-    for (i in amount.indices) {
-        amount[i] *= portions
+    val total = amount.map {
+        it * portions
     }
 
     println(
         "На $portions порций вам понадобится: " +
-                "Яиц - ${amount[0]} шт., " +
-                "молока - ${amount[1]} мл., " +
-                "сливочного масла - ${amount[2]} гр."
+                "Яиц - ${total[0]} шт., " +
+                "молока - ${total[1]} мл., " +
+                "сливочного масла - ${total[2]} гр."
     )
 
 }
