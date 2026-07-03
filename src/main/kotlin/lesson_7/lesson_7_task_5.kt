@@ -12,7 +12,7 @@ fun main() {
 
     var password = ""
 
-    println("Введите длину пароля (минимально 6):")
+    println("Введите длину пароля (минимальная длина - 6):")
     val passwordLength = readln().toInt()
 
     if (passwordLength >= MIN_PASSWORD_LENGTH) {
