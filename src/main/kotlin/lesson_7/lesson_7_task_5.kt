@@ -4,9 +4,9 @@ import kotlin.random.Random
 
 fun main() {
 
-    val digits = ("0123456789")
-    val lowerCase = ("abcdefghijklmnopqrstuvwxyz")
-    val upperCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    val digits = (0..9)
+    val lowerCase = ('a'..'z')
+    val upperCase = ('A'..'Z')
 
     val allChars = digits + lowerCase + upperCase
 
@@ -16,16 +16,16 @@ fun main() {
     val passwordLength = readln().toInt()
 
     if (passwordLength >= MIN_PASSWORD_LENGTH) {
-        password += digits[Random.nextInt(digits.length)]
-        password += lowerCase[Random.nextInt(lowerCase.length)]
-        password += upperCase[Random.nextInt(upperCase.length)]
+        password += digits.random()
+        password += lowerCase.random()
+        password += upperCase.random()
     } else {
         println("Минимальная длина - 6")
         return
     }
 
     for (i in 1..passwordLength - 3) {
-        password += allChars[Random.nextInt(allChars.length)]
+        password += allChars.random()
     }
 
     val passwordList = password.toMutableList()
