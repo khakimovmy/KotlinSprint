@@ -5,14 +5,7 @@ fun main() {
     var wins = 0
 
     while (true) {
-        val userNumber = randomDie()
-        println("Вам выпало - $userNumber")
-        val robotNumber = randomDie()
-        println("Роботу выпало - $robotNumber")
-
-        if (userNumber > robotNumber) {
-            wins++
-        }
+        if (playRound() == 1) wins++
         println("Хотите бросить кости еще раз? Введите Да или Нет?")
         val answer = readln().lowercase()
         if (answer == "да") {
@@ -25,4 +18,13 @@ fun main() {
 
 }
 
-fun randomDie(): Int { return (1..6).random() }
+fun rollDice(sides: Int = 6): Int = (1..sides).random()
+
+fun playRound(): Int {
+    val userNumber = rollDice(sides = 6)
+    println("Вам выпало - $userNumber")
+    val robotNumber = rollDice(sides = 6)
+    println("Роботу выпало - $robotNumber")
+
+    return if (userNumber > robotNumber) 1 else 0
+}
