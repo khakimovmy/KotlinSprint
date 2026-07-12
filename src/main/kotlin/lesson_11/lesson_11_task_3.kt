@@ -16,12 +16,13 @@ class Room(
         }
     }
 
-    class User(
-        val avatar: String,
-        val userName: String,
-        var status: String = "разговаривает",
-    )
 }
+
+class User(
+    val avatar: String,
+    val userName: String,
+    var status: String = "разговаривает",
+)
 
 fun main() {
     val room1: Room = Room(
