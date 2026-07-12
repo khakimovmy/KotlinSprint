@@ -1,6 +1,5 @@
 package org.example.lesson_11
 
-
 class Room(
     val cover: String,
     val name: String,
