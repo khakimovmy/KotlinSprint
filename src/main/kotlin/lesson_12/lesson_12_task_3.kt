@@ -5,8 +5,8 @@ class Weather3(
     nightTemp: Int,
     isRain: Boolean,
 ) {
-    val dayTemperature: Int = (dayTemp - 273.15).toInt()
-    val nightTemperature: Int = (nightTemp - 273.15).toInt()
+    val dayTemperature: Int = dayTemp - 273
+    val nightTemperature: Int = nightTemp - 273
     val precipitation: Boolean = isRain
 
     fun report() {
