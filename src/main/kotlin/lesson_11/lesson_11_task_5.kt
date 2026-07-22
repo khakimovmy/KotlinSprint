@@ -11,12 +11,33 @@ data class ForumMessage(
 )
 
 class Forum() {
-    var userId = 0
-    val users: MutableList<ForumMember> = mutableListOf()
-    val messages: MutableList<ForumMessage> = mutableListOf()
+    private var userId = 0
+    private val users: MutableList<ForumMember> = mutableListOf()
+    private val messages: MutableList<ForumMessage> = mutableListOf()
+
+    class ForumMemberBuilder() {
+        private var id: Int = 0
+        private var name: String = ""
+
+        fun setId(id: Int) = apply { this.id = id }
+        fun setName(name: String) = apply { this.name = name }
+        fun build() = ForumMember(id, name)
+    }
+
+    class ForumMessageBuilder() {
+        private var authorId: Int = 0
+        private var message: String = ""
+
+        fun setAuthorId(id: Int) = apply { this.authorId = id }
+        fun setMessage(msg: String) = apply { this.message = msg }
+        fun build() = ForumMessage(authorId, message)
+    }
 
     fun createNewUser(name: String): ForumMember {
-        val newUser = ForumMember(userId, name)
+        val newUser = ForumMemberBuilder()
+            .setId(userId)
+            .setName(name)
+            .build()
         users.add(newUser)
         userId++
         return newUser
@@ -25,7 +46,10 @@ class Forum() {
     fun createNewMessage(authorId: Int, message: String): ForumMessage? {
         val userExists = users.any { it.userId == authorId }
         if (userExists) {
-            val newMessage = ForumMessage(authorId, message)
+            val newMessage = ForumMessageBuilder()
+                .setAuthorId(authorId)
+                .setMessage(message)
+                .build()
             messages.add(newMessage)
             return newMessage
         } else {
