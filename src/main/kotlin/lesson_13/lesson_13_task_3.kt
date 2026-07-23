@@ -13,6 +13,8 @@ fun main() {
         Phone3("Alex", 976388, "null"),
         Phone3("Timur", 730159, "Google"),
         Phone3("Phil", 603658, "Microsoft")
-    ).mapNotNull { it.company }
-    println(contacts.joinToString())
+    )
+
+    val companies = contacts.mapNotNull { it.company }
+    println(companies.joinToString())
 }
