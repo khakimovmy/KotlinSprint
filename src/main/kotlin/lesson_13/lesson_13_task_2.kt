@@ -9,12 +9,12 @@ class Phone2(
         println(
             "Имя: $name\n" +
                     "Номер: $phone\n" +
-                    "Компания: ${company?: "не указано"}"
+                    "Компания: ${company ?: "не указано"}"
         )
     }
 }
 
 fun main() {
-    val phone1 = Phone2("Anna", 1234567890,)
+    val phone1 = Phone2("Anna", 1234567890)
     phone1.report()
 }
