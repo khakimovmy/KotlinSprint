@@ -12,8 +12,9 @@ class Phone4(
 
 fun main() {
     val phoneNumbers: MutableList<Phone4> = mutableListOf()
-    repeat(5) {
+    while (true) {
         val name = readln()
+        if (name.isEmpty()) break
         val phone = readln().toLongOrNull()
         val company = readln().ifBlank { null }
         if (phone == null) {
