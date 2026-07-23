@@ -16,10 +16,10 @@ fun main() {
         val name = readln()
         if (name.isEmpty()) break
         val phone = readln().toLongOrNull()
-        val company = readln().ifBlank { null }
         if (phone == null) {
             println("Номер не введен!")
         } else {
+            val company = readln().ifBlank { null }
             phoneNumbers.add(Phone4(name, phone, company))
         }
     }
