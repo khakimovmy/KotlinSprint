@@ -4,13 +4,7 @@ class Phone3(
     val name: String,
     val phone: Long,
     val company: String? = null,
-) {
-    fun report() {
-        println(
-            "Компания: ${company ?: "<не указано>"}"
-        )
-    }
-}
+)
 
 fun main() {
     val contacts = listOf(
@@ -19,7 +13,6 @@ fun main() {
         Phone3("Alex", 976388, "null"),
         Phone3("Timur", 730159, "Google"),
         Phone3("Phil", 603658, "Microsoft")
-    )
-
-    contacts.forEach { it.report() }
+    ).mapNotNull { it.company }
+    println(contacts.joinToString())
 }
