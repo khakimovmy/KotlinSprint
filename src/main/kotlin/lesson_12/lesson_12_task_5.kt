@@ -16,12 +16,12 @@ fun main() {
     val bool = listOf(true, false)
     val myList = mutableListOf<Weather5>()
 
-    for (eachDay in 1..30) {
+    repeat(30) {
         val day = Weather5(dayTemps.random(), nightTemps.random(), bool.random())
         myList.add(day)
     }
 
-    myList.map { it.report() }
+    myList.forEach { it.report() }
     println("Количество дней с осадками ${myList.count { it.isRaining }}")
     println(myList.map { it.dayTemperature }.average())
     println(myList.map { it.nightTemperature }.average())
