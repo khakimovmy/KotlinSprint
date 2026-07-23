@@ -9,7 +9,7 @@ class Phone2(
         println(
             "Имя: $name\n" +
                     "Номер: $phone\n" +
-                    "Компания: ${company ?: "не указано"}"
+                    "Компания: ${company ?: "<не указано>"}"
         )
     }
 }
