@@ -13,8 +13,7 @@ class Phone5(
 fun main() {
     try {
         val input = readln().toLong()
-        val phone = Phone5("Anna", input, "Sunway")
-        phone.report()
+        println(input)
     } catch (e: NumberFormatException) {
         println(e::class.simpleName)
     }
