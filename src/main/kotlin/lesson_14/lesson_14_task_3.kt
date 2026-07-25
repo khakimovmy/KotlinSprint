@@ -19,10 +19,10 @@ class Rectangle(color: String, val height: Double, val width: Double) : Figure(c
 
 fun main() {
     val figures = listOf<Figure>(
-        Circle("black", 4.0),
-        Circle("white", 5.0),
-        Rectangle("black", 6.0, 7.0),
-        Rectangle("white", 8.0, 9.0),
+        Circle(BLACK, 4.0),
+        Circle(WHITE, 5.0),
+        Rectangle(BLACK, 6.0, 7.0),
+        Rectangle(WHITE, 8.0, 9.0),
     )
 
     val blackPerimeter = figures
