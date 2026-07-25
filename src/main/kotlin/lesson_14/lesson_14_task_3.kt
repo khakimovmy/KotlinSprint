@@ -26,13 +26,16 @@ fun main() {
     )
 
     val blackPerimeter = figures
-        .filter { it.color == "black" }
+        .filter { it.color == BLACK }
         .sumOf { it.calculatePerimeter() }
 
     val whiteArea = figures
-        .filter { it.color == "white" }
+        .filter { it.color == WHITE }
         .sumOf { it.calculateArea() }
 
     println(blackPerimeter)
     println(whiteArea)
 }
+
+const val WHITE = "white"
+const val BLACK = "black"
