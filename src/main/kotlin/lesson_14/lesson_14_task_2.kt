@@ -9,7 +9,7 @@ open class Liner2(
         println("$speed, $payload, $capacity")
     }
 
-    open fun loadingMethod() {
+    open fun load() {
         println("лайнер выдвигает горизонтальный трап со шкафута")
     }
 }
@@ -23,7 +23,7 @@ class Cargo2 : Liner2() {
         println("$speed, $payload, $capacity")
     }
 
-    override fun loadingMethod() {
+    override fun load() {
         println("грузовой корабль активирует погрузочный кран")
     }
 }
@@ -37,7 +37,7 @@ class Icebreaker2 : Liner2() {
         println("$speed, $payload, $capacity $canBreakIce")
     }
 
-    override fun loadingMethod() {
+    override fun load() {
         println("ледокол открывает ворота со стороны кормы.")
     }
 }
@@ -48,9 +48,9 @@ fun main() {
     val icebreaker = Icebreaker2()
 
     liner.getInfo()
-    liner.loadingMethod()
+    liner.load()
     cargo.getInfo()
-    cargo.loadingMethod()
+    cargo.load()
     icebreaker.getInfo()
-    icebreaker.loadingMethod()
+    icebreaker.load()
 }
