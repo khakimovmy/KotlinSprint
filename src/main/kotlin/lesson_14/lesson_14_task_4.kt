@@ -3,20 +3,20 @@ package org.example.lesson_14
 open class CelestialBody(
     val name: String,
     val atmosphere: Boolean,
-    val canLand: Boolean
+    val canLand: Boolean,
 )
 
 class Planet(
     name: String,
     atmosphere: Boolean,
     canLand: Boolean,
-    val satellites: List<Satellite>
+    val satellites: List<Satellite>,
 ) : CelestialBody(name, atmosphere, canLand)
 
 class Satellite(
     name: String,
     atmosphere: Boolean,
-    canLand: Boolean
+    canLand: Boolean,
 ) : CelestialBody(name, atmosphere, canLand)
 
 fun main() {
