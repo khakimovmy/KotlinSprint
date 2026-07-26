@@ -9,12 +9,17 @@ class Chat() {
     }
 
     fun addThreadMessage(text: String, author: String, parentMessageId: Int) {
-        val childMessage = ChildMessage(id, text, author, parentMessageId)
-        messages.add(childMessage)
-        id++
+        for (message in messages) {
+            if (message.id == parentMessageId) {
+                val childMessage = ChildMessage(id, text, author, parentMessageId)
+                messages.add(childMessage)
+                id++
+                return
+            }
+        }
     }
 
-    val messages: MutableList<Message> = mutableListOf()
+    private val messages: MutableList<Message> = mutableListOf()
 
     fun printChat() {
         val grouped = messages.groupBy { if (it is ChildMessage) it.parentMessageId else it.id }
