@@ -5,8 +5,24 @@ interface Movable {
 }
 
 interface PassengerTransport {
-    fun loadPassenger(passengerAmount: Int)
-    fun unloadPassenger(passengerAmount: Int)
+    var currentCapacity: Int
+    val maxCapacity: Int
+
+    fun loadPassenger(passengerAmount: Int) {
+        if (currentCapacity + passengerAmount <= maxCapacity) {
+            currentCapacity += passengerAmount
+        } else {
+            println("No seats available")
+        }
+    }
+
+    fun unloadPassenger(passengerAmount: Int) {
+        if (passengerAmount in 1..currentCapacity) {
+            currentCapacity -= passengerAmount
+        } else {
+            println("Cannot unload")
+        }
+    }
 }
 
 interface CargoTransport {
@@ -15,49 +31,22 @@ interface CargoTransport {
 }
 
 class Truck(
-    var currentCapacity: Int,
+    override var currentCapacity: Int,
     var currentCargo: Int,
 ) : Movable, PassengerTransport, CargoTransport {
-    val maxCapacity: Int = 1
+
+    override val maxCapacity: Int = 1
     val maxCargo: Int = 2
 
     override fun move() {
-        println("Driving truck")
-    }
-
-    override fun loadPassenger(passengerAmount: Int) {
-        if (currentCapacity < maxCapacity) {
-            if (currentCapacity + passengerAmount <= maxCapacity) {
-                currentCapacity += passengerAmount
-            } else {
-                println("Max 1 passenger!")
-            }
-        } else {
-            println("No seats available!")
-        }
-    }
-
-    override fun unloadPassenger(passengerAmount: Int) {
-        if (currentCapacity > 0) {
-            if (passengerAmount <= currentCapacity) {
-                currentCapacity -= passengerAmount
-            } else {
-                println("There is only $currentCapacity passenger")
-            }
-        } else {
-            println("Empty")
-        }
+        println("Driving a truck")
     }
 
     override fun loadCargo(cargoAmount: Int) {
-        if (currentCargo < maxCargo) {
-            if ((currentCargo + cargoAmount) <= maxCargo) {
-                currentCargo += cargoAmount
-            } else {
-                println("Max 2 t.")
-            }
+        if ((currentCargo + cargoAmount) <= maxCargo) {
+            currentCargo += cargoAmount
         } else {
-            println("Full")
+            println("Cargo is full")
         }
     }
 
@@ -65,38 +54,19 @@ class Truck(
         if (cargoAmount in 1..currentCargo) {
             currentCargo -= cargoAmount
         } else {
-            println("Cannot unload $cargoAmount t, only $currentCargo t available")
+            println("Cannot unload cargo")
         }
     }
 }
 
 class Car(
-    var currentCapacity: Int
+    override var currentCapacity: Int
 ) : Movable, PassengerTransport {
-    val maxCapacity: Int = 3
+
+    override val maxCapacity: Int = 3
 
     override fun move() {
         println("Driving a car")
-    }
-
-    override fun loadPassenger(passengerAmount: Int) {
-        if (currentCapacity < maxCapacity) {
-            if (currentCapacity + passengerAmount <= maxCapacity) {
-                currentCapacity += passengerAmount
-            } else {
-                println("Max 3 passengers!")
-            }
-        } else {
-            println("No seats available!")
-        }
-    }
-
-    override fun unloadPassenger(passengerAmount: Int) {
-        if (passengerAmount in 1..currentCapacity) {
-            currentCapacity -= passengerAmount
-        } else {
-            println("Cannot unload $passengerAmount passengers, only $currentCapacity passengers available")
-        }
     }
 }
 
