@@ -3,11 +3,11 @@ package org.example.lesson_15
 abstract class Product(val name: String, val amount: Int)
 
 interface Search {
-    fun searchComponent(name: String)
+    fun searchComponent()
 }
 
-class Instrument(instrumentName: String, amount: Int) : Product(instrumentName, amount), Search {
-    override fun searchComponent(name: String) {
+class Instrument(name: String, amount: Int) : Product(name, amount), Search {
+    override fun searchComponent() {
         println("Выполняется поиск комплектующих для $name")
     }
 }
@@ -18,6 +18,6 @@ fun main() {
     val instrument1 = Instrument("Guitar", 2)
     val component1 = Component("Strings", 6)
 
-    instrument1.searchComponent(instrument1.name)
+    instrument1.searchComponent()
     println("${component1.name}: ${component1.amount} pcs.")
 }
