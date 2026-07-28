@@ -2,14 +2,14 @@ package org.example.lesson_16
 
 class Player private constructor(
     val name: String,
-    var power: Int,
+    private var power: Int,
     private var health: Int,
 ) {
     private var isAlive = true
 
     companion object {
         fun create(name: String, power: Int): Player {
-            require(power >= 0) { "Power can't be negative" }
+            require(power in 1..100) { "Power must be between 1 and 100" }
             return Player(name, power, 100)
         }
     }
