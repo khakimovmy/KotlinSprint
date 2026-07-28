@@ -1,11 +1,12 @@
 package org.example.lesson_16
 
+private const val PI = 3.14
+
 class Circle(private val radius: Double) {
-    private val pi = 3.14
 
-    fun calculateCircumference() = 2 * pi * radius
+    fun calculateCircumference() = 2 * PI * radius
 
-    fun calculateArea() = pi * radius * radius
+    fun calculateArea() = PI * radius * radius
 }
 
 fun main() {
