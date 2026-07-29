@@ -1,6 +1,6 @@
 package org.example.lesson_17
 
-class Ship(name: String, val averageSpeed: Int, val port: String) {
+class Ship(name: String, var averageSpeed: Int, var port: String) {
     var name: String = name
         set(value) {
             println("Нельзя менять имя!")
