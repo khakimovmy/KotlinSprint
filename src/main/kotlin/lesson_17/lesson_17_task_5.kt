@@ -1,6 +1,6 @@
 package org.example.lesson_17
 
-class Data(userLogin: String, userPassword: String) {
+class User(userLogin: String, userPassword: String) {
     private val _password = userPassword
 
     var login: String = userLogin
@@ -17,7 +17,7 @@ class Data(userLogin: String, userPassword: String) {
 }
 
 fun main() {
-    val user1 = Data("admin", "1234")
+    val user1 = User("admin", "1234")
     println(user1.login)
     user1.login = "snake"
 
