@@ -1,13 +1,13 @@
 package org.example.lesson_17
 
 class Package(val id: Int, currentLocation: String) {
-    private var _moveCount = 0
-    val moveCount: Int get() = _moveCount
+    var moveCount = 0
+        private set
 
     var currentLocation: String = currentLocation
         set(value) {
             field = value
-            _moveCount++
+            moveCount++
         }
 }
 
