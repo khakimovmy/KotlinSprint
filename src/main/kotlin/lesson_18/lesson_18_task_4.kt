@@ -21,7 +21,7 @@ class Cube(
 fun main() {
     val boxes: List<Box> = listOf(
         RectangularBox(2.0, 4.0, 3.0),
-        Cube(4.0)
+        Cube(4.0),
     )
 
     for (box in boxes) {
