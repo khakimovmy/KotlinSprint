@@ -1,6 +1,6 @@
 package org.example.lesson_18
 
-open class Tamagotchi(val name: String) {
+abstract class Tamagotchi(val name: String) {
     protected open val food = "еда"
 
     fun eat() { println("$name -> ест $food") }
