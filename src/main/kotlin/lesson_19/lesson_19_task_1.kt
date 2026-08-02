@@ -4,7 +4,7 @@ enum class Fish(val title: String) {
     GUPPY("гуппи"),
     ANGELFISH("скалярия"),
     GOLDFISH("золотая рыбка"),
-    SIAMESE_FIGHTING_FISH("петушок")
+    SIAMESE_FIGHTING_FISH("петушок"),
 }
 
 fun main() {
