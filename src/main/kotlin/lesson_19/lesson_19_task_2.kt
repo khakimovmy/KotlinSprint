@@ -9,7 +9,7 @@ enum class Category(private val title: String) {
 }
 
 class Item(val name: String, val id: Int, val category: Category) {
-    fun info() {
+    fun printInfo() {
         println("Название: $name\nId: $id\nКатегория: ${category.getCategoryTitle()}")
     }
 }
@@ -19,7 +19,7 @@ fun main() {
     val ruler = Item("Линейка", 3421, Category.STATIONERY)
     val phone = Item("Телефон", 4913, Category.OTHER)
 
-    shirt.info()
-    ruler.info()
-    phone.info()
+    shirt.printInfo()
+    ruler.printInfo()
+    phone.printInfo()
 }
