@@ -9,7 +9,7 @@ data class Person private constructor(
             val cleanName = name.trim()
             require(cleanName.isNotBlank()) { "Имя обязательно!" }
             val inputGender = gender.trim().uppercase()
-            require(Gender.entries.any {it.name == inputGender }) { "Неверный пол"}
+            require(Gender.entries.any { it.name == inputGender }) { "Неверный пол" }
             val personGender = Gender.valueOf(inputGender)
             return Person(cleanName, personGender)
         }
@@ -25,12 +25,19 @@ fun main() {
     println("Доступные значения пола: MALE, FEMALE")
 
     repeat(5) {
-        println("Введите имя:")
-        val name = readln()
-        println("Введите пол(MALE/FEMALE)")
-        val gender = readln()
-        val person = Person.register(name, gender)
-        people.add(person)
+        while (true) {
+            try {
+                println("Введите имя:")
+                val name = readln()
+                println("Введите пол(MALE/FEMALE)")
+                val gender = readln()
+                val person = Person.register(name, gender)
+                people.add(person)
+                break
+            } catch (e: IllegalArgumentException) {
+                println(e.message)
+            }
+        }
     }
 
     for (person in people) {
