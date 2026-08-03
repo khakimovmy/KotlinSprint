@@ -3,11 +3,11 @@ package org.example.lesson_19
 enum class Patron(val damage: Int) {
     BLUE(5),
     GREEN(10),
-    RED(20)
+    RED(20),
 }
 
 class Tank {
-    var currentPatron: Patron? = null
+    private var currentPatron: Patron? = null
 
     fun reload(patron: Patron) {
         currentPatron = patron
