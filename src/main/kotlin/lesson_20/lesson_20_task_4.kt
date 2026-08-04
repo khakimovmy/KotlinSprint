@@ -9,9 +9,9 @@ fun main() {
         }
     }
 
-    myLambdas.forEachIndexed { index, lambda ->
-        if (index % 2 == 0) {
-            lambda()
+    myLambdas
+        .filterIndexed { index, lambda ->
+            (index + 1) % 2 == 0
         }
-    }
+        .forEach { it() }
 }
