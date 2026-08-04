@@ -1,7 +1,7 @@
 package org.example.lesson_21
 
 fun String.vowelCount(): Int {
-    val vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯaeiouAEIOU"
+    val vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯaeiouAEIOU".toSet()
     return count { it in vowels }
 }
 
