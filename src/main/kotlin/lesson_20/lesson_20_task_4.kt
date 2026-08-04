@@ -10,7 +10,7 @@ fun main() {
     }
 
     myLambdas
-        .filterIndexed { index, lambda ->
+        .filterIndexed { index, _ ->
             (index + 1) % 2 == 0
         }
         .forEach { it() }
