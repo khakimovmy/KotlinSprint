@@ -2,7 +2,7 @@ package org.example.lesson_21
 
 import java.io.File
 
-fun File.writeWord(word: String) {
+fun File.prependWord(word: String) {
     val lowerWord = word.lowercase()
 
     val oldText = if (exists()) readText()
@@ -16,5 +16,5 @@ fun File.writeWord(word: String) {
 
 fun main() {
     val file = File("words.txt")
-    file.writeWord("Hello")
+    file.prependWord("Hello")
 }
