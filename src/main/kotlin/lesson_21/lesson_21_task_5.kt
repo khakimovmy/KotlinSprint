@@ -1,7 +1,7 @@
 package org.example.lesson_21
 
-fun Map<String, Int>.maxCategory(): String {
-    return entries.maxByOrNull { it.value }?.key ?: ""
+fun Map<String, Int>.maxCategory(): String? {
+    return entries.maxByOrNull { it.value }?.key
 }
 
 fun main() {
