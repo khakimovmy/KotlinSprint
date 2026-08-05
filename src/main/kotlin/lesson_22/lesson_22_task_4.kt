@@ -6,7 +6,7 @@ class MainScreenViewModel {
         val isLoading: Boolean = false,
     )
 
-    var mainScreenState = MainScreenState()
+    var mainScreenState: MainScreenState = MainScreenState()
 
     fun loadData() {
         mainScreenState = mainScreenState.copy(isLoading = true)
