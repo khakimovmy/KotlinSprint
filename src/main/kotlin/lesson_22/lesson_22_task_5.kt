@@ -17,6 +17,8 @@ fun main() {
         4.37
     )
 
-    val (name, description, date, distance) = alphaCentauri
-    println("$name, $description, $date, $distance")
+    println(alphaCentauri.component1())
+    println(alphaCentauri.component2())
+    println(alphaCentauri.component3())
+    println(alphaCentauri.component4())
 }
